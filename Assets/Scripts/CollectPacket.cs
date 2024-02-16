@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class CollectPacket : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private bool hasPacket;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.tag == "Packet" && !hasPacket)
+        {
+            print("Paket taken");
+            Destroy(collision.gameObject);
+            hasPacket = true;
+        }
+        else if(collision.tag == "DeliveryPoint" && hasPacket)
+        {
+            print("paketDelivered");
+            hasPacket = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
