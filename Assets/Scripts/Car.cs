@@ -9,7 +9,9 @@ public class Car : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, 0, steerSpeed);
-        transform.Translate(0, moveSpeed, 0);
+        float steerInput = Input.GetAxis("Horizontal") * steerSpeed * Time.deltaTime;
+        float moveInput = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        transform.Rotate(0, 0, -steerInput);
+        transform.Translate(0, moveInput, 0);
     }
 }
