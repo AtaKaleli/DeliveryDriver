@@ -11,37 +11,37 @@ public class Menu : MonoBehaviour
     
 
 
-    void OnClickOpenHowToPlayScreen()
+    public void OnClickOpenHowToPlayScreen()
     {
         menuScreen.SetActive(false);
         howToPlayScreen.SetActive(true);
     }
 
-    void OnClickOpenCreditsScreen()
+    public void OnClickOpenCreditsScreen()
     {
         menuScreen.SetActive(false);
         creditsScreen.SetActive(true);
     }
 
-    void OnClickCloseHowToPlayScreen()
+    public void OnClickCloseHowToPlayScreen()
     {
         menuScreen.SetActive(true);
         howToPlayScreen.SetActive(false);
     }
 
-    void OnClickCloseCreditsScreen()
+    public void OnClickCloseCreditsScreen()
     {
         menuScreen.SetActive(true);
-        howToPlayScreen.SetActive(false);
+        creditsScreen.SetActive(false);
     }
 
 
-    void OnClickStartGame()
+    public void OnClickStartGame()
     {
         SceneManager.LoadScene("GameScene");
     }
 
-    void OnClickExitGame()
+    public void OnClickExitGame()
     {
         Application.Quit();
     }

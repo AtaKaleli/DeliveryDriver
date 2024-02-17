@@ -11,7 +11,10 @@ public class Car : MonoBehaviour
     {
         float steerInput = Input.GetAxis("Horizontal") * steerSpeed * Time.deltaTime;
         float moveInput = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-        transform.Rotate(0, 0, -steerInput);
+        if (moveInput>0)
+            transform.Rotate(0, 0, -steerInput);
+        else
+            transform.Rotate(0, 0, steerInput);
         transform.Translate(0, moveInput, 0);
     }
 }
