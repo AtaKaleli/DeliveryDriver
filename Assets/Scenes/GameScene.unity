@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2eeabfb24c327d44abbc749bf4e64515, type: 2}
   m_sharedMaterial: {fileID: -7280909161421981869, guid: 2eeabfb24c327d44abbc749bf4e64515, type: 2}
@@ -744,6 +744,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8d028ffd46cdf46847c9f7f02071f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerText: {fileID: 104090841}
+  remainingPackeges: {fileID: 316770515}
+  showInfo: {fileID: 2042984173}
 --- !u!1 &260893374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1336,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -959.99994, y: -90}
-  m_SizeDelta: {x: 250, y: 75}
+  m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426533640
 MonoBehaviour:
@@ -4016,7 +4019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -120, y: -102.5}
+  m_AnchoredPosition: {x: -120, y: -90}
   m_SizeDelta: {x: 175, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679820079
@@ -5002,7 +5005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Collect Packeges
+  m_text: Collect Packages
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2eeabfb24c327d44abbc749bf4e64515, type: 2}
   m_sharedMaterial: {fileID: -7280909161421981869, guid: 2eeabfb24c327d44abbc749bf4e64515, type: 2}
