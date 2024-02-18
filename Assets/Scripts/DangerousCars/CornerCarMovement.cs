@@ -11,8 +11,8 @@ public class CornerCarMovement : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, 0, steerSpeed);
-        transform.Translate(0, moveSpeed, 0);
+        transform.Rotate(0, 0, steerSpeed*Time.deltaTime*100);
+        transform.Translate(0, moveSpeed*Time.deltaTime*100, 0);
     }
 
 }

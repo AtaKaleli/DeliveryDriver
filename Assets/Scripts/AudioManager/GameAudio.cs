@@ -14,6 +14,7 @@ public class GameAudio : MonoBehaviour
     [SerializeField] private AudioClip packageDelivered;
     [SerializeField] private AudioClip packageWarning;
     [SerializeField] private AudioClip fool;
+    [SerializeField] private AudioClip carCrash;
     
 
 
@@ -28,6 +29,8 @@ public class GameAudio : MonoBehaviour
     public void PlayPackageDelivered() => SFXAudio.PlayOneShot(packageDelivered);
     public void PlayPackageWarning() => SFXAudio.PlayOneShot(packageWarning);
     public void PlayFool() => SFXAudio.PlayOneShot(fool);
+    public void PlayCarCrash() => SFXAudio.PlayOneShot(carCrash);
+    public void MuteBackgroundAudio() => backgroundAudio.Pause();
     
 
 

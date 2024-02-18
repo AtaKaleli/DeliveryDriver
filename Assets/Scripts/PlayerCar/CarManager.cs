@@ -49,6 +49,14 @@ public class CarManager : MonoBehaviour
             GameAudio.instance.PlayFool();
             Destroy(collision.gameObject);
         }
+
+        else if(collision.tag == "DangerousCar")
+        {
+            GameAudio.instance.MuteBackgroundAudio();
+            GameAudio.instance.PlayCarCrash();
+            
+            Time.timeScale = 0; //end the game
+        }
     }
 
     private void DecreasePacketNumber() => noOfPackeges--;

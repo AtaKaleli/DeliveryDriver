@@ -33,7 +33,10 @@ public class GameUI : MonoBehaviour
         timeValue -= Time.deltaTime;
         timerText.text = timeValue.ToString("#,#");
         if (timeValue <= 0)
-            Time.timeScale = 0;
+        {
+            Time.timeScale = 0;//end the game
+            GameAudio.instance.MuteBackgroundAudio();
+        }
 
     }
 
