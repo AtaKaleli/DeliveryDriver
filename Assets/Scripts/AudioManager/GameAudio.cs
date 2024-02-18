@@ -14,6 +14,7 @@ public class GameAudio : MonoBehaviour
     [SerializeField] private AudioClip packageDelivered;
     [SerializeField] private AudioClip packageWarning;
     [SerializeField] private AudioClip fool;
+    
 
 
     private void Awake()
@@ -27,6 +28,7 @@ public class GameAudio : MonoBehaviour
     public void PlayPackageDelivered() => SFXAudio.PlayOneShot(packageDelivered);
     public void PlayPackageWarning() => SFXAudio.PlayOneShot(packageWarning);
     public void PlayFool() => SFXAudio.PlayOneShot(fool);
+    
 
 
 
