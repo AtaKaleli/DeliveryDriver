@@ -648,13 +648,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Car Controller: W A S D or Arrow Keys
+  m_text: '<b><color=black>Car Controller</color></b>: W A S D <color=black>or </color>Arrow
+    Keys
 
 
-    The goal of the game is that
-    you need to collect every package(       ) one by one and deliver it to the delivery
-    point(      ). Don''t forget that <b>you can''t</b> carry multiple packages at
-    a same time.'
+    The goal of the game is that you need to collect every package(      
+    ) one by one and deliver it to the delivery point(      ). Don''t forget that
+    <b><color=black>you can''t</color></b> carry multiple packages at a same time.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3048,8 +3048,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
