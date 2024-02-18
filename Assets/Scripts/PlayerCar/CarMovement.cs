@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Car : MonoBehaviour
+public class CarMovement : MonoBehaviour
 {
 
     [SerializeField] private float steerSpeed;

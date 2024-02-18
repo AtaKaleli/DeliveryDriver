@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectPacket : MonoBehaviour
+public class CarManager : MonoBehaviour
 {
 
     [SerializeField] private SpriteRenderer packageSprite;

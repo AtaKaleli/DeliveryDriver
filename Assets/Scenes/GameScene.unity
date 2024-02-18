@@ -4937,7 +4937,7 @@ GameObject:
   - component: {fileID: 1112516150}
   m_Layer: 0
   m_Name: CornerCar 1
-  m_TagString: Untagged
+  m_TagString: DangerousCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6438,7 +6438,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxCD: {fileID: 1465095052}
   bridgeCarPrefab: {fileID: 7029671217013467424, guid: 9f8cf1fd7660ca240a0c38426869825f, type: 3}
-  timer: 3
 --- !u!1 &1466630033
 GameObject:
   m_ObjectHideFlags: 0
@@ -6894,7 +6893,7 @@ GameObject:
   - component: {fileID: 1586109805}
   m_Layer: 0
   m_Name: CornerCar2
-  m_TagString: Untagged
+  m_TagString: DangerousCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
