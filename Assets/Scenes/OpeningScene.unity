@@ -1240,8 +1240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 959.9999, y: -32.233}
-  m_SizeDelta: {x: 1920, y: 378.783}
+  m_AnchoredPosition: {x: 959.9999, y: -98.641846}
+  m_SizeDelta: {x: 1920, y: 511.6007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &461371087
 MonoBehaviour:
@@ -1264,19 +1264,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: '<color=black><b>Easy</color> : You have <color=red>300</color> seconds
-    to delivery all packeges
+    to deliver all packages
 
 
-    <color=black>Medium</color>:You have <color=red>180</color>
-    seconds to delivery all packeges
+    <color=black>Medium</color>:You have <color=red>220</color>
+    seconds to deliver all packages
 
 
-    <color=black>Hard</color>:You have <color=red>90</color>
-    seconds to delivery all packeges
+    <color=black>Hard</color>:You have <color=red>160</color>
+    seconds to deliver all packages
 
 
     <color=black>Impossible</color>:You have
-    <color=red>45</color> seconds to delivery all packeges'
+    <color=red>100</color> seconds to deliver all packages'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4542,7 +4542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5686275}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
