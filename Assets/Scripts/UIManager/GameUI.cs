@@ -21,7 +21,7 @@ public class GameUI : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        
+        timeValue = 10000;
     }
 
 

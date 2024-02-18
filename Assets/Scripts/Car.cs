@@ -6,6 +6,10 @@ public class Car : MonoBehaviour
     [SerializeField] private float steerSpeed;
     [SerializeField] private float moveSpeed;
 
+    private void Awake()
+    {
+        transform.position = new Vector3(-8.22f, -0.7f, 0);
+    }
 
     void Update()
     {
@@ -15,6 +19,9 @@ public class Car : MonoBehaviour
             transform.Rotate(0, 0, -steerInput);
         else
             transform.Rotate(0, 0, steerInput);
+
         transform.Translate(0, moveInput, 0);
+
+        
     }
 }
