@@ -6,7 +6,11 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject menuScreen;
     [SerializeField] private GameObject howToPlayScreen;
     [SerializeField] private GameObject creditsScreen;
+    [SerializeField] private GameObject levelSelectionScreen;
+    [SerializeField] private GameObject levelInfoScreen;
 
+
+    
 
 
     public void OnClickOpenHowToPlayScreen()
@@ -40,7 +44,9 @@ public class Menu : MonoBehaviour
 
     public void OnClickStartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        MenuAudio.instance.PlayButtonClick();
+        menuScreen.SetActive(false);
+        levelSelectionScreen.SetActive(true);
     }
 
     public void OnClickExitGame()
@@ -48,6 +54,19 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
+    public void OnClickOpenLevelInfoScreen()
+    {
+        MenuAudio.instance.PlayButtonClick();
+        levelSelectionScreen.SetActive(false);
+        levelInfoScreen.SetActive(true);
+    }
+
+    public void OnClickCloseLevelInfoScreen()
+    {
+        MenuAudio.instance.PlayButtonClick();
+        levelSelectionScreen.SetActive(true);
+        levelInfoScreen.SetActive(false);
+    }
 
 
 
