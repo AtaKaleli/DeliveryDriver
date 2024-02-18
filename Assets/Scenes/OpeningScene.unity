@@ -420,7 +420,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 320541139}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnClickOpenCreditsScreen
+        m_MethodName: OnClickSelectHardLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1715,7 +1715,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 320541139}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnClickOpenHowToPlayScreen
+        m_MethodName: OnClickSelectMediumLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3250,7 +3250,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 320541139}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnClickStartGame
+        m_MethodName: OnClickSelectEasyLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3384,7 +3384,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 320541139}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnClickExitGame
+        m_MethodName: OnClickSelectImpossibleLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

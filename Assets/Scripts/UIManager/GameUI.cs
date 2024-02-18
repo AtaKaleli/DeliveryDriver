@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameUI : MonoBehaviour
 {
@@ -10,16 +11,17 @@ public class GameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI remainingPackeges;
     
+    public static float timeValue;
 
 
-
-    private float timeValue;
+    
+    
 
 
     private void Awake()
     {
         instance = this;
-        timeValue = 0;
+        
     }
 
 
@@ -28,12 +30,10 @@ public class GameUI : MonoBehaviour
     private void Update()
     {
 
-        timeValue += Time.deltaTime;
-
-        if (timeValue >= 1)
-        {
-            timerText.text = timeValue.ToString("#,#");
-        }
+        timeValue -= Time.deltaTime;
+        timerText.text = timeValue.ToString("#,#");
+        if (timeValue <= 0)
+            Time.timeScale = 0;
 
     }
 

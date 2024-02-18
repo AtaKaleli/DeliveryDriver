@@ -8,7 +8,7 @@ public class CollectPacket : MonoBehaviour
     [SerializeField] private SpriteRenderer packageSprite;
 
     private bool hasPacket;
-    private int noOfPackeges = 5;
+    private int noOfPackeges = 7;
 
     private void Awake()
     {

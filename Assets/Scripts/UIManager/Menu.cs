@@ -68,7 +68,29 @@ public class Menu : MonoBehaviour
         levelInfoScreen.SetActive(false);
     }
 
+    public void OnClickSelectEasyLevel()
+    {
+        GameUI.timeValue = 300;
+        SceneManager.LoadScene("GameScene");
+    }
 
+    public void OnClickSelectMediumLevel()
+    {
+        GameUI.timeValue = 220;
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void OnClickSelectHardLevel()
+    {
+        GameUI.timeValue = 160;
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void OnClickSelectImpossibleLevel()
+    {
+        GameUI.timeValue = 100;
+        SceneManager.LoadScene("GameScene");
+    }
 
 
 }
