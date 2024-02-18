@@ -5,9 +5,15 @@ using UnityEngine;
 public class CollectPacket : MonoBehaviour
 {
 
+    [SerializeField] private SpriteRenderer packageSprite;
+
     private bool hasPacket;
     private int noOfPackeges = 5;
 
+    private void Awake()
+    {
+        packageSprite.enabled = false;
+    }
 
     private void Update()
     {
@@ -20,7 +26,7 @@ public class CollectPacket : MonoBehaviour
             GameAudio.instance.PlayPackageTaken();
             Destroy(collision.gameObject);
             hasPacket = true;
-            
+            packageSprite.enabled = true;
 
         }
 
@@ -35,6 +41,7 @@ public class CollectPacket : MonoBehaviour
             GameAudio.instance.PlayPackageDelivered();
             DecreasePacketNumber();
             hasPacket = false;
+            packageSprite.enabled = false;
         }
 
         else if(collision.tag == "Fool")
