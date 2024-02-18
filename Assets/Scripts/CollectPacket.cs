@@ -17,22 +17,30 @@ public class CollectPacket : MonoBehaviour
     {
         if(collision.tag == "Packet" && !hasPacket)
         {
-            GameUI.instance.ShowInfo("Package Taken!");
+            GameAudio.instance.PlayPackageTaken();
             Destroy(collision.gameObject);
             hasPacket = true;
-            DecreasePacketNumber();
+            
+
         }
 
         else if (collision.tag == "Packet" && hasPacket)
         {
-            GameUI.instance.ShowInfo("First Deliver Already Taken Package!");
+            GameAudio.instance.PlayPackageWarning();
             
         }
 
         else if(collision.tag == "DeliveryPoint" && hasPacket)
         {
-            GameUI.instance.ShowInfo("Package Delivered!");
+            GameAudio.instance.PlayPackageDelivered();
+            DecreasePacketNumber();
             hasPacket = false;
+        }
+
+        else if(collision.tag == "Fool")
+        {
+            GameAudio.instance.PlayFool();
+            Destroy(collision.gameObject);
         }
     }
 

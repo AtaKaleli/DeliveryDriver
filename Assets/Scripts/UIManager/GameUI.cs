@@ -9,7 +9,7 @@ public class GameUI : MonoBehaviour
     public static GameUI instance;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI remainingPackeges;
-    [SerializeField] private TextMeshProUGUI showInfo;
+    
 
 
 
@@ -42,9 +42,6 @@ public class GameUI : MonoBehaviour
         remainingPackeges.text = packetNo.ToString();
     }
 
-    public void ShowInfo(string info)
-    {
-        showInfo.text = info;
-    }
+    
 
 }
