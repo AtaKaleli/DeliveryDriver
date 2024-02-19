@@ -88,6 +88,12 @@ public class GameUI : MonoBehaviour
         gameOverInformation.text = text;
     }
 
+    public void MoveGameWinningScene()
+    {
+        SceneManager.LoadScene("GameWinVideoScene");
+        
+    }
+
     public void DeliveryPointAnim(bool packageStatus) => deliveryPointAnim.SetBool("PackageTaken", packageStatus);
     public void ArrowSignTopAnim(bool packageStatus) => arrowSignTopAnim.SetBool("PackageTaken", packageStatus);
     public void ArrowSignBottomAnim(bool packageStatus) => arrowSignBottomAnim.SetBool("PackageTaken", packageStatus);

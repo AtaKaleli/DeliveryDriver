@@ -9,7 +9,7 @@ public class CarManager : MonoBehaviour
 
     private bool hasPacket;
     public int noOfPackeges = 7;
-
+    private bool moveVideo = true;
     private void Awake()
     {
         packageSprite.enabled = false;
@@ -19,10 +19,22 @@ public class CarManager : MonoBehaviour
     {
         GameUI.instance.ShowRemainingPackeges(noOfPackeges);
         if(noOfPackeges == 0)
+        {
+            
             GameUI.instance.GameOverInformation("Well Done!\n\n You have delivered every package successfully!");
+            if (moveVideo)
+            {
+                GameUI.instance.MoveGameWinningScene();
+                moveVideo=false;
+
+            }
+        }
         
         
     }
+
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Packet" && !hasPacket)

@@ -4959,7 +4959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   packageSprite: {fileID: 62024044}
-  noOfPackeges: 7
+  noOfPackeges: 1
 --- !u!1 &1020012888
 GameObject:
   m_ObjectHideFlags: 0
