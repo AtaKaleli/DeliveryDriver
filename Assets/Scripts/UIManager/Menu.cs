@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
     
     
 
-
+    
     public void OnClickOpenHowToPlayScreen()
     {
         MenuAudio.instance.PlayButtonClick();
@@ -67,6 +67,13 @@ public class Menu : MonoBehaviour
         MenuAudio.instance.PlayButtonClick();
         levelSelectionScreen.SetActive(true);
         levelInfoScreen.SetActive(false);
+    }
+
+    public void OnClickCloseLevelSelection()
+    {
+        MenuAudio.instance.PlayButtonClick();
+        levelSelectionScreen.SetActive(false);
+        menuScreen.SetActive(true);
     }
 
     public void OnClickSelectEasyLevel()
