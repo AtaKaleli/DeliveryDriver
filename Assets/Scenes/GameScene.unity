@@ -1503,6 +1503,7 @@ MonoBehaviour:
   arrowSignTopAnim: {fileID: 1241802977}
   arrowSignBottomAnim: {fileID: 377000792}
   levelLoader: {fileID: 1645707243}
+  gameEnd: 0
 --- !u!1 &260893374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,7 +4962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   packageSprite: {fileID: 62024044}
   levelLoader: {fileID: 1645707243}
-  noOfPackeges: 1
+  noOfPackeges: 7
 --- !u!1 &1020012888
 GameObject:
   m_ObjectHideFlags: 0
@@ -7905,7 +7906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5988946395769666340, guid: 1496e03a9cd302445a096b771fba8056, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5988946395769666343, guid: 1496e03a9cd302445a096b771fba8056, type: 3}
       propertyPath: m_RootOrder

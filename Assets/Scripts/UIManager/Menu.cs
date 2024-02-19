@@ -81,7 +81,7 @@ public class Menu : MonoBehaviour
     {
         levelLoader.SetActive(true);
         LevelLoader.instance.LoadNextLevel();
-        GameUI.timeValue = 220;
+        GameUI.timeValue = 200;
         
     }
 
@@ -89,7 +89,7 @@ public class Menu : MonoBehaviour
     {
         levelLoader.SetActive(true);
         LevelLoader.instance.LoadNextLevel();
-        GameUI.timeValue = 160;
+        GameUI.timeValue = 120;
         
     }
 
@@ -97,7 +97,7 @@ public class Menu : MonoBehaviour
     {
         levelLoader.SetActive(true);
         LevelLoader.instance.LoadNextLevel();
-        GameUI.timeValue = 100;
+        GameUI.timeValue = 90;
         
     }
 

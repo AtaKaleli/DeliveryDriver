@@ -22,7 +22,8 @@ public class CarManager : MonoBehaviour
         GameUI.instance.ShowRemainingPackeges(noOfPackeges);
         if(noOfPackeges == 0)
         {
-            
+            GameUI.instance.gameEnd = true;
+            Time.timeScale = 1;
             
             if (moveVideo)
             {

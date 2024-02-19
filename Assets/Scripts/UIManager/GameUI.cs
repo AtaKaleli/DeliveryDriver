@@ -23,7 +23,7 @@ public class GameUI : MonoBehaviour
     
     public static float timeValue;
     private float gameTimer;
-
+    public bool gameEnd = false;
     
     
 
@@ -41,8 +41,9 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
+        if(!gameEnd)
+            gameTimer -= Time.deltaTime;
 
-        gameTimer -= Time.deltaTime;
         timerText.text = gameTimer.ToString("#,#");
         if (gameTimer <= 0)
         {
@@ -75,7 +76,8 @@ public class GameUI : MonoBehaviour
     public void OnClickReturnMenu()
     {
         gameOverPanel.SetActive(false);
-        SceneManager.LoadScene("OpeningScene");
+        levelLoader.SetActive(true);
+        LevelLoader.instance.MoveMenu();
     }
 
     public void EndGame()
