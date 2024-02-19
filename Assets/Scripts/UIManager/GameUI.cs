@@ -62,6 +62,7 @@ public class GameUI : MonoBehaviour
 
     public void OnClickRestartGame()
     {
+        
         gameOverPanel.SetActive(false);
         SceneManager.LoadScene("GameScene");
         Time.timeScale = 1;
@@ -75,6 +76,7 @@ public class GameUI : MonoBehaviour
 
     public void OnClickReturnMenu()
     {
+        Time.timeScale = 1;
         gameOverPanel.SetActive(false);
         levelLoader.SetActive(true);
         LevelLoader.instance.MoveMenu();

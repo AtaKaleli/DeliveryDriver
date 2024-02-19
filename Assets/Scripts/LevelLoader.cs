@@ -29,6 +29,12 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(GoMenuLevelSelection());
     }
 
+    public void restartAnimation()
+    {
+        Time.timeScale = 1f;
+        
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetBool("TransitionOn",true);
@@ -45,5 +51,6 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene("OpeningScene");
     }
 
+   
 
 }
