@@ -28,6 +28,7 @@ public class CarManager : MonoBehaviour
         if(collision.tag == "Packet" && !hasPacket)
         {
             GameAudio.instance.PlayPackageTaken();
+            PackageTakenAnimationController(true);
             Destroy(collision.gameObject);
             hasPacket = true;
             packageSprite.enabled = true;
@@ -43,6 +44,7 @@ public class CarManager : MonoBehaviour
         else if(collision.tag == "DeliveryPoint" && hasPacket)
         {
             GameAudio.instance.PlayPackageDelivered();
+            PackageTakenAnimationController(false);
             DecreasePacketNumber();
             hasPacket = false;
             packageSprite.enabled = false;
@@ -61,6 +63,13 @@ public class CarManager : MonoBehaviour
             GameUI.instance.GameOverInformation("You crashed!\n\nYou could not have delivered packages on time!");
 
         }
+    }
+
+    private static void PackageTakenAnimationController(bool hasPackage)
+    {
+        GameUI.instance.DeliveryPointAnim(hasPackage);
+        GameUI.instance.ArrowSignTopAnim(hasPackage);
+        GameUI.instance.ArrowSignBottomAnim(hasPackage);
     }
 
     private void DecreasePacketNumber() => noOfPackeges--;

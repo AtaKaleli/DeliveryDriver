@@ -14,7 +14,9 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI gameOverInformation;
 
-    
+    [SerializeField] private Animator deliveryPointAnim;
+    [SerializeField] private Animator arrowSignTopAnim;
+    [SerializeField] private Animator arrowSignBottomAnim;
     
     
     
@@ -86,6 +88,9 @@ public class GameUI : MonoBehaviour
         gameOverInformation.text = text;
     }
 
+    public void DeliveryPointAnim(bool packageStatus) => deliveryPointAnim.SetBool("PackageTaken", packageStatus);
+    public void ArrowSignTopAnim(bool packageStatus) => arrowSignTopAnim.SetBool("PackageTaken", packageStatus);
+    public void ArrowSignBottomAnim(bool packageStatus) => arrowSignBottomAnim.SetBool("PackageTaken", packageStatus);
     
 
 }
