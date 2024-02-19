@@ -8,7 +8,7 @@ public class CarManager : MonoBehaviour
     [SerializeField] private SpriteRenderer packageSprite;
 
     private bool hasPacket;
-    private int noOfPackeges = 7;
+    public int noOfPackeges = 7;
 
     private void Awake()
     {
@@ -18,6 +18,10 @@ public class CarManager : MonoBehaviour
     private void Update()
     {
         GameUI.instance.ShowRemainingPackeges(noOfPackeges);
+        if(noOfPackeges == 0)
+            GameUI.instance.GameOverInformation("Well Done!\n\n You have delivered every package successfully!");
+        
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -54,8 +58,8 @@ public class CarManager : MonoBehaviour
         {
             GameAudio.instance.MuteBackgroundAudio();
             GameAudio.instance.PlayCarCrash();
-            
-            Time.timeScale = 0; //end the game
+            GameUI.instance.GameOverInformation("You crashed!\n\nYou could not have delivered packages on time!");
+
         }
     }
 

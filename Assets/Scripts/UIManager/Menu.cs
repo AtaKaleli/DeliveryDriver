@@ -70,6 +70,7 @@ public class Menu : MonoBehaviour
 
     public void OnClickSelectEasyLevel()
     {
+        
         GameUI.timeValue = 300;
         SceneManager.LoadScene("GameScene");
     }
