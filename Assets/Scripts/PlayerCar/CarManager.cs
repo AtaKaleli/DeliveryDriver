@@ -6,6 +6,8 @@ public class CarManager : MonoBehaviour
 {
 
     [SerializeField] private SpriteRenderer packageSprite;
+    [SerializeField] private GameObject levelLoader;
+    
 
     private bool hasPacket;
     public int noOfPackeges = 7;
@@ -21,10 +23,13 @@ public class CarManager : MonoBehaviour
         if(noOfPackeges == 0)
         {
             
-            GameUI.instance.GameOverInformation("Well Done!\n\n You have delivered every package successfully!");
+            
             if (moveVideo)
             {
-                GameUI.instance.MoveGameWinningScene();
+                
+                levelLoader.SetActive(true);
+                LevelLoader.instance.LoadNextLevel();
+                
                 moveVideo=false;
 
             }

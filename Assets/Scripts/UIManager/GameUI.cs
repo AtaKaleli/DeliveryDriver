@@ -17,6 +17,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] private Animator deliveryPointAnim;
     [SerializeField] private Animator arrowSignTopAnim;
     [SerializeField] private Animator arrowSignBottomAnim;
+    [SerializeField] private GameObject levelLoader;
     
     
     
@@ -29,12 +30,13 @@ public class GameUI : MonoBehaviour
 
     private void Awake()
     {
+        
         gameTimer = timeValue;
         instance = this;
         Time.timeScale = 1;
     }
 
-
+    
 
 
     private void Update()
@@ -88,11 +90,7 @@ public class GameUI : MonoBehaviour
         gameOverInformation.text = text;
     }
 
-    public void MoveGameWinningScene()
-    {
-        SceneManager.LoadScene("GameWinVideoScene");
-        
-    }
+   
 
     public void DeliveryPointAnim(bool packageStatus) => deliveryPointAnim.SetBool("PackageTaken", packageStatus);
     public void ArrowSignTopAnim(bool packageStatus) => arrowSignTopAnim.SetBool("PackageTaken", packageStatus);

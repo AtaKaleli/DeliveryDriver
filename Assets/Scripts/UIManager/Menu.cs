@@ -8,8 +8,9 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject creditsScreen;
     [SerializeField] private GameObject levelSelectionScreen;
     [SerializeField] private GameObject levelInfoScreen;
+    [SerializeField] private GameObject levelLoader;
 
-
+    
     
 
 
@@ -70,27 +71,34 @@ public class Menu : MonoBehaviour
 
     public void OnClickSelectEasyLevel()
     {
-        
+        levelLoader.SetActive(true);
+        LevelLoader.instance.LoadNextLevel();
         GameUI.timeValue = 300;
-        SceneManager.LoadScene("GameScene");
+        
     }
 
     public void OnClickSelectMediumLevel()
     {
+        levelLoader.SetActive(true);
+        LevelLoader.instance.LoadNextLevel();
         GameUI.timeValue = 220;
-        SceneManager.LoadScene("GameScene");
+        
     }
 
     public void OnClickSelectHardLevel()
     {
+        levelLoader.SetActive(true);
+        LevelLoader.instance.LoadNextLevel();
         GameUI.timeValue = 160;
-        SceneManager.LoadScene("GameScene");
+        
     }
 
     public void OnClickSelectImpossibleLevel()
     {
+        levelLoader.SetActive(true);
+        LevelLoader.instance.LoadNextLevel();
         GameUI.timeValue = 100;
-        SceneManager.LoadScene("GameScene");
+        
     }
 
 
