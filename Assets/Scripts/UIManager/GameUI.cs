@@ -41,13 +41,20 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
-        if(!gameEnd)
-            gameTimer -= Time.deltaTime;
-
-        timerText.text = gameTimer.ToString("#,#");
-        if (gameTimer <= 0)
+        if (!gameEnd)
         {
-            EndGame();
+           
+            gameTimer -= Time.deltaTime;
+            timerText.text = gameTimer.ToString("#,#");
+        }
+            
+
+
+        if (gameTimer <= 0 && !gameEnd)
+        {
+            Time.timeScale = 0;
+            gameEnd = true;
+            gameOverPanel.SetActive(true);
             GameAudio.instance.MuteBackgroundAudio();
             gameOverInformation.text = "You failed!\n\nYou could not have delivered packages on time!";
             
@@ -62,10 +69,10 @@ public class GameUI : MonoBehaviour
 
     public void OnClickRestartGame()
     {
-        
+        Time.timeScale = 1;
         gameOverPanel.SetActive(false);
         SceneManager.LoadScene("GameScene");
-        Time.timeScale = 1;
+        
 
     }
     
@@ -82,15 +89,11 @@ public class GameUI : MonoBehaviour
         LevelLoader.instance.MoveMenu();
     }
 
-    public void EndGame()
-    {
-        Time.timeScale = 0;
-        gameOverPanel.SetActive(true);
-    }
+    
 
     public void GameOverInformation(string text)
     {
-        EndGame();
+        gameOverPanel.SetActive(true);
         gameOverInformation.text = text;
     }
 

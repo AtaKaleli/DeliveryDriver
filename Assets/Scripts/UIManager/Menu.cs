@@ -104,7 +104,7 @@ public class Menu : MonoBehaviour
     {
         levelLoader.SetActive(true);
         LevelLoader.instance.LoadNextLevel();
-        GameUI.timeValue = 90;
+        GameUI.timeValue = 5;
         
     }
 

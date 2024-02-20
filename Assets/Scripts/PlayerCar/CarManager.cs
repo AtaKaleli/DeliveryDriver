@@ -76,9 +76,11 @@ public class CarManager : MonoBehaviour
 
         else if(collision.tag == "DangerousCar")
         {
+            Time.timeScale = 0;
             GameAudio.instance.MuteBackgroundAudio();
             GameAudio.instance.PlayCarCrash();
             GameUI.instance.GameOverInformation("You crashed!\n\nYou could not have delivered packages on time!");
+            GameUI.instance.gameEnd = true;
 
         }
     }
